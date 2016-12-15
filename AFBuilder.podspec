@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name           = 'AFBuilder'
-  s.version        = '0.2.2'
+  s.version        = '0.1'
   s.summary        = "Builder for AFNetworking."
   s.homepage       = "https://github.com/Khmelevsky/AFBuilder"
   s.author         = { 'Alexandr Khmelevsky' => 'khmelevsky.alex@gmail.com' }
