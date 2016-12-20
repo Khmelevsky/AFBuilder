@@ -13,7 +13,7 @@ public protocol AFBuildConfigurator: class {
     
     var urlString: String { get set }
     var method: AFHTTPSessionManager.Method { get set }
-    var params: AnyObject? { get set }
+    var params: Any? { get set }
     
 }
 
@@ -22,7 +22,7 @@ open class AFHTTPDefaultConfigurator: AFBuildConfigurator {
     
     open var urlString: String
     open var method: AFHTTPSessionManager.Method = .get
-    open var params: AnyObject? = nil
+    open var params: Any? = nil
     
     public init(urlString: String) {
         self.urlString = urlString
