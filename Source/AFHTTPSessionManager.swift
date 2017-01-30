@@ -17,6 +17,7 @@ extension AFHTTPSessionManager {
         case put
         case delete
         case patch
+        case postMultipartForm(((AFMultipartFormData) -> Swift.Void)?)
     }
     
     public func builder(withUrlString url: String, clouser:(AFBuildConfigurator) -> Swift.Void) -> AFBuilder {
