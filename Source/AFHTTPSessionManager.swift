@@ -20,14 +20,14 @@ extension AFHTTPSessionManager {
         case postMultipartForm(((AFMultipartFormData) -> Swift.Void)?)
     }
     
-    public func builder(withUrlString url: String, clouser:(AFBuildConfigurator) -> Swift.Void) -> AFBuilder {
-        let configurator = AFHTTPDefaultConfigurator(urlString: url)
+    public func builder(withUrlString url: String, clouser:(Configurator) -> Swift.Void) -> RequestBuilder {
+        let configurator = AFHTTPDefaultConfigurator(urlString: url, manager:self)
         clouser(configurator)
-        return AFBuilder(manager: self, configurator: configurator)
+        return RequestBuilder(manager: self, configurator: configurator)
     }
     
-    public func builder(withConfigurator configurator:AFBuildConfigurator) -> AFBuilder {
-        return AFBuilder(manager: self, configurator: configurator)
+    public func builder(withConfigurator configurator:Configurator) -> RequestBuilder {
+        return RequestBuilder(manager: self, configurator: configurator)
     }
     
 }
