@@ -12,7 +12,7 @@ import AFNetworking
 open class Request {
     private let builder: RequestBuilder
     
-    init(builder:RequestBuilder) {
+    public init(builder:RequestBuilder) {
         self.builder = builder
     }
     
