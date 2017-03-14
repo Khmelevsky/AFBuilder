@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name           = 'AFNetworking-Handlers'
+  s.name           = 'AFBuilder'
   s.version        = '0.2.1'
   s.summary        = "AFNetworking request handling."
   s.homepage       = "https://github.com/Khmelevsky/AFNetworking-Handlers"
