@@ -10,12 +10,14 @@ import AFNetworking
 
 extension AFHTTPSessionManager {
     
+    @available(*, deprecated, message: "Use RequestManager")
     public func builder(withUrlString url: String, clouser:(Configurator) -> Swift.Void) -> RequestBuilder {
         let configurator = AFHTTPDefaultConfigurator(urlString: url, manager:self)
         clouser(configurator)
         return RequestBuilder(manager: self, configurator: configurator)
     }
     
+    @available(*, deprecated, message: "Use RequestManager")
     public func builder(withConfigurator configurator:Configurator) -> RequestBuilder {
         return RequestBuilder(manager: self, configurator: configurator)
     }
