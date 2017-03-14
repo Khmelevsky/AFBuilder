@@ -17,6 +17,9 @@ extension AFHTTPSessionManager {
         case put
         case delete
         case patch
+        case multipartFormData(((AFMultipartFormData) -> Swift.Void)?)
+        
+        @available(*, deprecated, message: "Use multipartFormData")
         case postMultipartForm(((AFMultipartFormData) -> Swift.Void)?)
     }
     

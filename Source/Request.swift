@@ -70,6 +70,7 @@ open class Request {
         case .delete: task = manager.delete(configurator.urlString, parameters: configurator.params, success: success, failure: failure)
         case .patch:  task = manager.patch(configurator.urlString, parameters: configurator.params, success: success, failure: failure)
         case .postMultipartForm(let data): task = manager.post(configurator.urlString, parameters: configurator.params, constructingBodyWith: data, progress: progress, success: success, failure: failure)
+        case .multipartFormData(let data): task = manager.post(configurator.urlString, parameters: configurator.params, constructingBodyWith: data, progress: progress, success: success, failure: failure)
         }
         
         handlers.forEach({ $0.requestStarted(builder:self.builder, task: task) })
